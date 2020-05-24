@@ -9,7 +9,7 @@ $(document).ready(function () {
             var count = 1;
             var events = [];
             $.each(data.events, function (key, value) {
-                if(regex == "/(?:)/i"){ // como o regex pega o valor do searchField ele começa com "/(?:)/i", assim eu passo o valor de vazio
+                if(regex == "/(?:)/i"){ // as the regex takes the value of the searchField it starts with "/ (? :) / i", so I pass the empty value
                     regex = "";
                 }
                 var dateNow = new Date();
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 var dateShortFilter = dateStart.toLocaleDateString();
                 var dateShort = dateEnd.toLocaleDateString();
                 dateMonthEvent = dateStart.getMonth();
-                if (dateMonthEvent == dateNowMonth || regex != "") { // lista os eventos do mês, se já tiver filtrado no dateFilter ele lista somente o pesquisado
+                if (dateMonthEvent == dateNowMonth || regex != "") { // lists the events of the month, if you have already filtered in the dateFilter it lists only the searched
                     if (dateShortFilter.search(regex) != -1) {
                         events += '<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 cardFilter">';
                         events += '<div class="dateShort" data-dateShort="' + dateShort + '"></div>';
