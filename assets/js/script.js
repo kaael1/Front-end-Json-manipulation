@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(function() {
+    $(function () {
         $('#btnFilter').click();
     });
     $('#btnFilter').click(function () {
@@ -9,7 +9,7 @@ $(document).ready(function () {
             var count = 1;
             var events = [];
             $.each(data.events, function (key, value) {
-                if(regex == "/(?:)/i"){ // as the regex takes the value of the searchField it starts with "/ (? :) / i", so I pass the empty value
+                if (regex == "/(?:)/i") { // as the regex takes the value of the searchField it starts with "/ (? :) / i", so I pass the empty value
                     regex = "";
                 }
                 var dateNow = new Date();
