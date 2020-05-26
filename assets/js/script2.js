@@ -4,10 +4,8 @@ $(function () {
     })
     $('#form').submit(function (e) {
         e.preventDefault();
-
         var txt = $(this).serialize();
-        console.log(txt);
-
+        
         $.ajax({
             type: 'post',
             url: 'ajax/ajax.php',
